@@ -3,8 +3,8 @@ class Obstacles {
     this.ctx = ctx;
     this.x = x;
     this.y = y;
-    this.width = 30;
-    this.height = 30;
+    this.width = 20;
+    this.height = 20;
     this.color = "red";
   }
 
@@ -28,12 +28,12 @@ class Obstacles {
     return this.x + this.width;
   }
 
- /*  crashWith(obstacle) {
+  crashWith(obstacles) {
     return !(
-      this.bottom() < obstacle.top() ||
-      this.top() < obstacle.bottom() ||
-      this.right() < obstacle.left() ||
-      this.left() < obstacle.right()
+      this.bottom() < obstacles.top() ||
+      this.top() < obstacles.bottom() ||
+      this.right() < obstacles.left() ||
+      this.left() < obstacles.right()
     );
-  } */
+  }
 }

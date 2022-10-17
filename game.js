@@ -16,7 +16,7 @@ class Game {
 
   drawBackground() {
     this.background.src =
-      "/docs/assets/images/space_background_for_infinite_scroll_example-300x300.png";
+      "/docs/assets/images/blue-sky-with-clouds-background-elegant_1017-26302.png";
     this.ctx.drawImage(this.background, 0, 0, this.width, this.height);
   }
 
@@ -32,12 +32,11 @@ class Game {
     this.drawBackground();
     this.player.draw();
     this.updateObstacles();
-    //this.score();
-    //this.checkGameOver();
+    this.score();
+    this.checkGameOver();
   };
 
   //create a method for each side of the canvas where the enemies will appear
-
   updateObstacles() {
     for (let i = 0; i < this.obstaclesRight.length; i++) {
       this.obstaclesRight[i].x -= 1;
@@ -70,5 +69,25 @@ class Game {
         new Obstacles(this.ctx, 700, Math.floor(Math.random() * 550))
       );
     }
+  }
+
+  score() {
+    this.ctx.font = "18px monospace";
+    this.ctx.fillStyle = "black";
+    const score = Math.floor(this.frames / 5);
+    this.ctx.fillText(`Score; ${score}, 100, 50 `);
+  }
+
+  checkGameOver() {
+    const crashed = this.obstacles.some((obstacles) => {
+      return this.player.crashWith(obstacles);
+    });
+    if (crashed) {
+      this.stop();
+    }
+  }
+
+  stop() {
+    clearInterval(this.intervalId);
   }
 }

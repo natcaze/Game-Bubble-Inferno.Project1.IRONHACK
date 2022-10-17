@@ -7,10 +7,14 @@ h1 {
 }
 
 #game-board {
-  padding: 1% 27%;
+  padding: 1% 28%;
 }
 
 #start-button {
   padding: 0% 10%;
   display: flex;
+}
+
+.rules {
+  text-align: center;
 }
