@@ -11,6 +11,7 @@ class Game {
     this.height = 550;
     this.controls = null;
     this.background = new Image();
+    this.points = 0;
     this.ctx = ctx;
   }
 
@@ -21,7 +22,7 @@ class Game {
   }
 
   start() {
-    this.player = new Player(350, 275, 0, 0, this.ctx);
+    this.player = new Player(350, 275, 20, 20, this.ctx);
     this.controls = new Controls(this.player);
     this.controls.keyboardEvents();
     this.intervalId = setInterval(this.update, 1000 / 60);
@@ -73,18 +74,24 @@ class Game {
 
   score() {
     this.ctx.font = "18px monospace";
-    this.ctx.fillStyle = "black";
-    const score = Math.floor(this.frames / 5);
-    this.ctx.fillText(`Score; ${score}, 100, 50 `);
+    this.ctx.fillStyle = "white";
+    //const score = Math.floor(this.frames / 5);
+    this.ctx.fillText(`Score: ${this.points}`, 100, 50);
   }
 
   checkGameOver() {
-    const crashed = this.obstacles.some((obstacles) => {
-      return this.player.crashWith(obstacles);
+    this.obstaclesUp.some((obstacle) => {
+      if (this.player.crashWith(obstacle)) this.stop();
     });
-    if (crashed) {
-      this.stop();
-    }
+    this.obstaclesDown.some((obstacle) => {
+      if (this.player.crashWith(obstacle)) this.stop();
+    });
+    this.obstaclesLeft.some((obstacle) => {
+      if (this.player.crashWith(obstacle)) this.stop();
+    });
+    this.obstaclesRight.some((obstacle) => {
+      if (this.player.crashWith(obstacle)) this.stop();
+    });
   }
 
   stop() {

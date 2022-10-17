@@ -11,7 +11,40 @@ class Player {
 
   draw() {
     ctx.fillStyle = "pink";
-    ctx.fillRect(this.x, this.y, 20, 20);
+    ctx.fillRect(this.x, this.y, this.width, this.height);
     //this.ctx.drawImage(this.img, this.x, this.y, 50, 50);
   }
+
+  top() {
+    return this.y;
+  }
+  bottom() {
+    return this.y + this.height;
+  }
+
+  left() {
+    return this.x;
+  }
+
+  right() {
+    return this.x + this.width;
+  }
+
+  crashWith(obstacles) {
+    return !(
+      this.bottom() < obstacles.top() ||
+      this.top() > obstacles.bottom() ||
+      this.right() < obstacles.left() ||
+      this.left() > obstacles.right()
+    );
+  }
+
+  //WHY??? :(
+  /*  crashWith(obstacles) {
+    return !(
+      this.bottom() < obstacles.top() ||
+      this.top() > obstacles.bottom() ||
+      this.right() < obstacles.left() ||
+      this.left() > obstacles.right()
+    ); */
 }

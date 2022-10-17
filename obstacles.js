@@ -28,12 +28,4 @@ class Obstacles {
     return this.x + this.width;
   }
 
-  crashWith(obstacles) {
-    return !(
-      this.bottom() < obstacles.top() ||
-      this.top() < obstacles.bottom() ||
-      this.right() < obstacles.left() ||
-      this.left() < obstacles.right()
-    );
-  }
 }
