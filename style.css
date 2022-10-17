@@ -1,0 +1,11 @@
+h1 {
+  text-align: center;
+}
+
+#game-board {
+  padding: 1% 27%;
+}
+
+#start-button {
+  padding: 0% 10%;
+}

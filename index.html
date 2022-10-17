@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
     <title>Document</title>
-</head>
-<body>
-    <h1> This will be a game </h1>
-</body>
+  </head>
+  <body>
+    <h1>Loading a game...</h1>
+    <div id="game-board">
+      <canvas
+        id="canvas"
+        width="700"
+        height="550"
+        style="border: 3px solid black"
+      ></canvas>
+    </div>
+    <div>
+      <button id="start-button">StartGame</button>
+    </div>
+
+    <script src="/player.js"></script>
+    <script src="/controls.js"></script>
+    <script src="/game.js"></script>
+    <script src="/index.js"></script>
+  </body>
 </html>
