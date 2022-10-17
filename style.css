@@ -1,3 +1,7 @@
+body {
+  background: url();
+}
+
 h1 {
   text-align: center;
 }
@@ -8,4 +12,5 @@ h1 {
 
 #start-button {
   padding: 0% 10%;
+  display: flex;
 }

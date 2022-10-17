@@ -11,7 +11,7 @@ class Player {
 
   draw() {
     ctx.fillStyle = "pink";
-    ctx.fillRect(355, 250, 20, 20);
+    ctx.fillRect(this.x, this.y, 20, 20);
     //this.ctx.drawImage(this.img, this.x, this.y, 50, 50);
   }
 }

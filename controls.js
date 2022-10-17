@@ -7,15 +7,22 @@ class Controls {
     window.addEventListener("keydown", (e) => {
       switch (e.code) {
         case "ArrowLeft":
-          if (this.player.x >= 25) {
-            this.player.x -= 10;
-          }
+          this.player.x -= 10;
           break;
 
         case "ArrowRight":
-          if (this.player.x + this.player.width <= 500) {
-            this.player.x += 10;
-          }
+          this.player.x += 10;
+
+          break;
+
+        case "ArrowUp":
+          this.player.y -= 10;
+
+          break;
+
+        case "ArrowDown":
+          this.player.y += 10;
+
           break;
       }
     });
