@@ -8,26 +8,34 @@
     <title>Document</title>
   </head>
   <body>
-    <br />
-    <br />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap"
+      rel="stylesheet"
+    />
+
     <h1>Loading a game...</h1>
+
     <div id="game-board">
       <canvas
         id="canvas"
+        class="hidden"
         width="700"
         height="550"
-        style="border: 5px solid white"
+        style="border: 10px solid white"
       ></canvas>
+      <!-- <div id="start-screen"> -->
+      <button id="start-button">START GAME</button>
+      <button id="restart-button" class="hidden">TRY AGAIN!</button>
+
+      <!-- </div> -->
     </div>
     <div class="rules">
       <h3>
-        Here will be the story <br />
-        and objective of the game.
+        Pusheen is cute but like all cats does not like water! <br />
+        Help Pusheen avoid the shower bubbles.
       </h3>
     </div>
-    <div>
-      <button id="start-button">StartGame</button>
-    </div>
+
     <script src="/obstacles.js"></script>
     <script src="/controls.js"></script>
     <script src="/player.js"></script>

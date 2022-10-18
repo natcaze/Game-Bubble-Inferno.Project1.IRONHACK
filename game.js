@@ -1,3 +1,5 @@
+let restartBtn = document.getElementById("restart-button");
+
 class Game {
   constructor(ctx) {
     this.player = null;
@@ -11,30 +13,37 @@ class Game {
     this.height = 550;
     this.controls = null;
     this.background = new Image();
-    this.points = 0;
+    //this.points = 0;
     this.ctx = ctx;
+    this.gameFinish = false;
   }
 
   drawBackground() {
-    this.background.src =
-      "/docs/assets/images/blue-sky-with-clouds-background-elegant_1017-26302.png";
+    this.background.src = "/docs/assets/images/white2.png";
     this.ctx.drawImage(this.background, 0, 0, this.width, this.height);
   }
 
+  
+  clear() {
+    this.ctx.clearRect(0, 0, this.width, this.height);
+  }
   start() {
+    this.clear();
     this.player = new Player(350, 275, 20, 20, this.ctx);
     this.controls = new Controls(this.player);
     this.controls.keyboardEvents();
-    this.intervalId = setInterval(this.update, 1000 / 60);
+    this.intervalId = setInterval(this.update, 500 / 60);
+    canvas.classList.remove("hidden");
   }
 
   update = () => {
     this.frames++;
+    this.clear();
     this.drawBackground();
     this.player.draw();
     this.updateObstacles();
-    this.score();
     this.checkGameOver();
+    this.score();
   };
 
   //create a method for each side of the canvas where the enemies will appear
@@ -74,9 +83,9 @@ class Game {
 
   score() {
     this.ctx.font = "18px monospace";
-    this.ctx.fillStyle = "white";
-    //const score = Math.floor(this.frames / 5);
-    this.ctx.fillText(`Score: ${this.points}`, 100, 50);
+    this.ctx.fillStyle = "#142d4c";
+    const score = Math.floor(this.frames / 5);
+    this.ctx.fillText(`Score: ${score}`, 570, 35);
   }
 
   checkGameOver() {
@@ -95,6 +104,12 @@ class Game {
   }
 
   stop() {
+    this.gameFinish = true;
+    restartBtn.classList.remove("hidden");
     clearInterval(this.intervalId);
   }
 }
+
+/* 
+ localStorage.setItem("score", myScore);
+  const displayScore = localStorage.getItem("score"); */
