@@ -23,7 +23,6 @@ class Game {
     this.ctx.drawImage(this.background, 0, 0, this.width, this.height);
   }
 
-  
   clear() {
     this.ctx.clearRect(0, 0, this.width, this.height);
   }
@@ -69,12 +68,18 @@ class Game {
       this.obstaclesDown.push(
         new Obstacles(this.ctx, Math.floor(Math.random() * 700), 0)
       );
+    }
+    if (this.frames % 180 === 0) {
       this.obstaclesUp.push(
         new Obstacles(this.ctx, Math.floor(Math.random() * 700), 550)
       );
+    }
+    if (this.frames % 270 === 0) {
       this.obstaclesLeft.push(
         new Obstacles(this.ctx, 0, Math.floor(Math.random() * 550))
       );
+    }
+    if (this.frames % 130 === 0) {
       this.obstaclesRight.push(
         new Obstacles(this.ctx, 700, Math.floor(Math.random() * 550))
       );
@@ -105,8 +110,13 @@ class Game {
 
   stop() {
     this.gameFinish = true;
-    restartBtn.classList.remove("hidden");
+    this.obstaclesUp = [];
+    this.obstaclesLeft = [];
+    this.obstaclesDown = [];
+    this.obstaclesRight = [];
+    this.frames = 0;
     clearInterval(this.intervalId);
+    restartBtn.classList.remove("hidden");
   }
 }
 

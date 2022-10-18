@@ -19,7 +19,7 @@ window.onload = () => {
   let restartBtn = document.getElementById("restart-button");
   restartBtn.onclick = () => {
     game.start();
-    restartBtn.style.display = "none";
+    restartBtn.classList.add("hidden");
   };
 };
 
