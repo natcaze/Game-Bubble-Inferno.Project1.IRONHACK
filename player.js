@@ -12,7 +12,7 @@ class Player {
   draw() {
     /* ctx.fillStyle = "pink";
     ctx.fillRect(this.x, this.y, this.width, this.height); */
-    this.img.src = "/docs/assets/images/catplayer.png";
+    this.img.src = "docs/assets/images/catplayer.png";
     this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
   }
 

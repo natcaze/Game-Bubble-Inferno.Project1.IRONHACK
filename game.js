@@ -19,7 +19,7 @@ class Game {
   }
 
   drawBackground() {
-    this.background.src = "/docs/assets/images/white2.png";
+    this.background.src = "docs/assets/images/white2.png";
     this.ctx.drawImage(this.background, 0, 0, this.width, this.height);
   }
 
@@ -118,8 +118,9 @@ class Game {
     clearInterval(this.intervalId);
     restartBtn.classList.remove("hidden");
   }
-}
-
-/* 
+  /* 
  localStorage.setItem("score", myScore);
   const displayScore = localStorage.getItem("score"); */
+}
+
+
