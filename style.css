@@ -1,7 +1,7 @@
 body {
   background: url(docs/assets/images/showerbubbles.png);
   background-size: cover;
-  font-family: "Yulong", sans-serif;
+  font-family: "Pixel Sans Serif", sans-serif;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -12,11 +12,11 @@ body {
 }
 
 h1 {
-  color: #5b446a;
+  color: #00204a;
   text-align: center;
-  font-size: 90px;
+  font-size: 50px;
   font-weight: bolder;
-  margin: 10px;
+  margin: 20px;
 }
 
 #game-board {
@@ -30,13 +30,14 @@ h1 {
 }
 
 #textScore {
-  font-size: 30px;
-  margin: 0px 0px 10px 0px ;
+  font-size: 20px;
+  margin: 0px 0px 20px 0px;
+  color: #6643b5;
 }
 
 #highScore {
-  color: black;
-  font-size: 30px;
+  color: #6643b5;
+  font-size: 20px;
 }
 
 #start-button {
@@ -44,10 +45,20 @@ h1 {
   height: 570px;
   border: none;
   background-color: #bbe4e9;
+  color: #379956;
   font-weight: bolder;
-  font-size: 50px;
+  font-size: 40px;
   position: absolute;
-  opacity: 0.5;
+  opacity: 1;
+  background-image: url(docs/assets/images/waving.png);
+  background-size: 65%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px;
+  font-family: "Pixel Sans Serif", sans-serif;
   /* visibility: hidden; */
 }
 
@@ -56,11 +67,20 @@ h1 {
   height: 570px;
   border: none;
   background-color: #bbe4e9;
+  color: #379956;
   font-weight: bolder;
   text-align: center;
   font-size: 50px;
   position: absolute;
-  opacity: 0.5;
+  opacity: 1;
+  background-image: url(docs/assets/images/angryPusheen.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 35px;
+  font-family: "Pixel Sans Serif", sans-serif;
   /* visibility: hidden; */
 }
 .hidden {
@@ -68,9 +88,9 @@ h1 {
 }
 
 .rules {
-  color: #5b446a;
+  color: #00204a;
   text-align: center;
-  margin: 0px;
+  margin: 10px;
   padding: 0px;
-  font-size: 20px;
+  font-size: 15px;
 }

@@ -19,7 +19,7 @@ class Game {
   }
 
   drawBackground() {
-    this.background.src = "docs/assets/images/white2.png";
+    this.background.src = "docs/assets/images/bathtube.png";
     this.ctx.drawImage(this.background, 0, 0, this.width, this.height);
   }
 
@@ -28,7 +28,7 @@ class Game {
   }
   start() {
     this.clear();
-    this.player = new Player(350, 275, 20, 20, this.ctx);
+    this.player = new Player(335, 250, 20, 20, this.ctx);
     this.controls = new Controls(this.player);
     this.controls.keyboardEvents();
     this.intervalId = setInterval(this.update, 500 / 60);
@@ -74,12 +74,12 @@ class Game {
         new Obstacles(this.ctx, Math.floor(Math.random() * 700), 550)
       );
     }
-    if (this.frames % 270 === 0) {
+    if (this.frames % 200 === 0) {
       this.obstaclesLeft.push(
         new Obstacles(this.ctx, 0, Math.floor(Math.random() * 550))
       );
     }
-    if (this.frames % 120 === 0) {
+    if (this.frames % 180 === 0) {
       this.obstaclesRight.push(
         new Obstacles(this.ctx, 700, Math.floor(Math.random() * 550))
       );
