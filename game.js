@@ -79,7 +79,7 @@ class Game {
         new Obstacles(this.ctx, 0, Math.floor(Math.random() * 550))
       );
     }
-    if (this.frames % 70 === 0) {
+    if (this.frames % 120 === 0) {
       this.obstaclesRight.push(
         new Obstacles(this.ctx, 700, Math.floor(Math.random() * 550))
       );
