@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Pixel Sans Serif";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Pixel Sans Serif"),
+    url("https://fonts.cdnfonts.com/s/87968/Pixel Sans Serif.woff")
+      format("woff");
+}
+
 body {
   background: url(docs/assets/images/showerbubbles.png);
   background-size: cover;
