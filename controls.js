@@ -19,14 +19,14 @@ class Controls {
           break;
 
         case "ArrowUp":
-          if (this.player.y > 1) {
+          if (this.player.y > 10) {
             this.player.y -= 10;
           }
 
           break;
 
         case "ArrowDown":
-          if (this.player.y < 540) {
+          if (this.player.y < 490) {
             this.player.y += 10;
           }
 
