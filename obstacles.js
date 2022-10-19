@@ -13,7 +13,7 @@ class Obstacles {
     /* this.ctx.fillStyle = this.color;
     this.ctx.fillRect(this.x, this.y, this.width, this.height); */
 
-    this.img.src = "/docs/assets/images/circle.png";
+    this.img.src = "docs/assets/images/circle.png";
     this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
   }
 

@@ -79,7 +79,7 @@ class Game {
         new Obstacles(this.ctx, 0, Math.floor(Math.random() * 550))
       );
     }
-    if (this.frames % 130 === 0) {
+    if (this.frames % 70 === 0) {
       this.obstaclesRight.push(
         new Obstacles(this.ctx, 700, Math.floor(Math.random() * 550))
       );
@@ -108,7 +108,8 @@ class Game {
     });
   }
 
-  stop() {
+  stop = () => {
+    this.checkHighScore();
     this.gameFinish = true;
     this.obstaclesUp = [];
     this.obstaclesLeft = [];
@@ -117,11 +118,17 @@ class Game {
     this.frames = 0;
     clearInterval(this.intervalId);
     restartBtn.classList.remove("hidden");
+  };
+
+  checkHighScore() {
+    let highScore = localStorage.getItem("score");
+    console.log(highScore);
+    let currentScore = Math.floor(this.frames / 5);
+    if (currentScore > highScore) {
+      localStorage.setItem("score", currentScore);
+    }
   }
-  
-  /* 
- localStorage.setItem("score", myScore);
-  const displayScore = localStorage.getItem("score"); */
+
+  /* localStorage.setItem("score", myScore);
+  const displayScore = localStorage.getItem("score");  */
 }
-
-

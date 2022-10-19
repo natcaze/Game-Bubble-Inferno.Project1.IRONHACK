@@ -3,6 +3,12 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
+//highscore
+/* let highScore = localStorage.getItem("score");
+
+let record = document.getElementById("highScore");
+record.innerHTML = highScore; */
+
 /* let game = new Game(ctx);
 game.start(); */
 let game = new Game(ctx);
@@ -22,4 +28,3 @@ window.onload = () => {
     restartBtn.classList.add("hidden");
   };
 };
-
