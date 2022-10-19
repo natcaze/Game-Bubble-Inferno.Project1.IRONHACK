@@ -8,14 +8,15 @@ body {
   align-items: center;
   margin: 0px;
   padding: 0px;
+  border: 0px;
 }
 
 h1 {
   color: #5b446a;
   text-align: center;
-  font-size: 70px;
+  font-size: 90px;
   font-weight: bolder;
-  margin: 15px;
+  margin: 10px;
 }
 
 #game-board {
@@ -25,6 +26,17 @@ h1 {
   align-content: center;
   justify-content: center;
   text-align: center;
+  margin: 0px 0px;
+}
+
+#textScore {
+  font-size: 30px;
+  margin: 0px 0px 10px 0px ;
+}
+
+#highScore {
+  color: black;
+  font-size: 30px;
 }
 
 #start-button {
@@ -58,15 +70,7 @@ h1 {
 .rules {
   color: #5b446a;
   text-align: center;
-}
-
-#textScore {
-  font-size: 50px;
- margin: 10px;
-}
-
-#highScore {
-  color: black;
-  font-size: 50px;
-
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
 }
