@@ -23,19 +23,3 @@ window.onload = () => {
   };
 };
 
-/*   if (!game) {
-      let startPlaying = document.getElementById("start-button");
-      startPlaying.classList.add("hidden");
-      game.start();
-    }
-  };
-
-  //restart-button:
-  document.getElementById("restart-button").onclick = () => {
-    if (game && !update()) {
-      let gameOver = document.getElementById("game-over");
-      gameOver.classList.add("hidden");
-      game.start();
-    }
-  };
-}; */

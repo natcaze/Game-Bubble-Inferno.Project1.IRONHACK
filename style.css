@@ -54,23 +54,6 @@ h1 {
   visibility: hidden;
 }
 
-/* #start-screen {
-  width: 700px;
-  height: 550px;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  background-color: #bbe4e9;
-  opacity: 0.5;
-} */
-
-/* #restart-button {
-  display: flex;
-  width: 700;
-  height: 550;
-}
- */
 .rules {
   color: #5b446a;
   text-align: center;

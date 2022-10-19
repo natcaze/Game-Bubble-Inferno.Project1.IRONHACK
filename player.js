@@ -2,8 +2,8 @@ class Player {
   constructor(x, y, width, height, ctx) {
     this.x = x;
     this.y = y;
-    this.width = 40;
-    this.height = 40;
+    this.width = 50;
+    this.height = 50;
     //this.color = color;
     this.ctx = ctx;
     this.img = new Image();

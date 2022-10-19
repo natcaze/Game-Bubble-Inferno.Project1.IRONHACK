@@ -118,6 +118,7 @@ class Game {
     clearInterval(this.intervalId);
     restartBtn.classList.remove("hidden");
   }
+  
   /* 
  localStorage.setItem("score", myScore);
   const displayScore = localStorage.getItem("score"); */
