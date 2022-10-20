@@ -1,6 +1,12 @@
 let restartBtn = document.getElementById("restart-button");
-let song = new Audio("docs/assets/sounds/som_1.mp3");
-song.loop = true;
+let song = new Audio("docs/assets/sounds/game over sound.mp3");
+song.loop = false;
+
+let song2 = new Audio("docs/assets/sounds/game music.mp3");
+song2.loop = true;
+song2.play();
+song2.pause();
+song2.currentTime = 0;
 
 class Game {
   constructor(ctx) {
@@ -29,13 +35,13 @@ class Game {
     this.ctx.clearRect(0, 0, this.width, this.height);
   }
   start() {
-    song.play();
     this.clear();
     this.player = new Player(335, 250, 20, 20, this.ctx);
     this.controls = new Controls(this.player);
     this.controls.keyboardEvents();
     this.intervalId = setInterval(this.update, 500 / 60);
     canvas.classList.remove("hidden");
+    song2.play();
   }
 
   update = () => {
@@ -45,7 +51,7 @@ class Game {
     this.player.draw();
     this.updateObstacles();
     this.checkGameOver();
-    this.checkHighScore();
+    /* this.checkHighScore(); */
     this.score();
   };
 
@@ -113,6 +119,7 @@ class Game {
   }
 
   stop = () => {
+    this.checkHighScore();
     this.gameFinish = true;
     this.obstaclesUp = [];
     this.obstaclesLeft = [];
@@ -121,6 +128,9 @@ class Game {
     this.frames = 0;
     clearInterval(this.intervalId);
     restartBtn.classList.remove("hidden");
+
+    song.play();
+    song2.pause();
   };
 
   checkHighScore() {
@@ -129,6 +139,8 @@ class Game {
     let currentScore = Math.floor(this.frames / 5);
     if (currentScore > highScore) {
       localStorage.setItem("score", currentScore);
+      let record = document.getElementById("highScore");
+      record.innerHTML = currentScore;
     }
   }
 
