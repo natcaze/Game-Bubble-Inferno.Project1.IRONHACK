@@ -23,7 +23,7 @@ body {
 h1 {
   color: #00204a;
   text-align: center;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: bolder;
   margin: 15px;
 }
@@ -102,9 +102,9 @@ h1 {
   text-align: center;
   margin: 0px;
   padding: 0px;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 h3 {
-    margin: 7px;
+  margin: 7px;
 }
