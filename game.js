@@ -1,4 +1,6 @@
 let restartBtn = document.getElementById("restart-button");
+let song = new Audio("docs/assets/sounds/som_1.mp3");
+song.loop = true;
 
 class Game {
   constructor(ctx) {
@@ -27,6 +29,7 @@ class Game {
     this.ctx.clearRect(0, 0, this.width, this.height);
   }
   start() {
+    song.play();
     this.clear();
     this.player = new Player(335, 250, 20, 20, this.ctx);
     this.controls = new Controls(this.player);
@@ -42,6 +45,7 @@ class Game {
     this.player.draw();
     this.updateObstacles();
     this.checkGameOver();
+    this.checkHighScore();
     this.score();
   };
 
@@ -109,7 +113,6 @@ class Game {
   }
 
   stop = () => {
-    this.checkHighScore();
     this.gameFinish = true;
     this.obstaclesUp = [];
     this.obstaclesLeft = [];
