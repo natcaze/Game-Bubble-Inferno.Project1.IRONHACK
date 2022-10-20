@@ -24,9 +24,9 @@ body {
 h1 {
   color: #00204a;
   text-align: center;
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bolder;
-  margin: 15px;
+  margin: 12px;
 }
 
 #game-board {
@@ -42,12 +42,15 @@ h1 {
 
 #textScore {
   font-size: 15px;
-  margin: 0px 0px 10px 0px;
-  color: #6643b5;
+  margin: 0px 0px 8px 0px;
+  color: #bbe4e9;
+  border: solid 5px #c54c82;
+  background-color: #c54c82;
+  opacity: 0.6;
 }
 
 #highScore {
-  color: #6643b5;
+  color: #bbe4e9;
   font-size: 15px;
 }
 
@@ -56,7 +59,7 @@ h1 {
   height: 570px;
   border: none;
   background-color: #bbe4e9;
-  color: #379956;
+  color: #c54c82;
   font-weight: bolder;
   font-size: 40px;
   position: absolute;
@@ -78,7 +81,7 @@ h1 {
   height: 570px;
   border: none;
   background-color: #bbe4e9;
-  color: #379956;
+  color: #c54c82;
   font-weight: bolder;
   text-align: center;
   font-size: 40px;
@@ -99,13 +102,18 @@ h1 {
 }
 
 .rules {
-  color: #00204a;
+  /* color: #00204a; */
   text-align: center;
-  margin: 0px;
-  padding: 0px;
-  font-size: 12px;
-}
-
-h3 {
   margin: 7px;
+  padding: 0px;
+  font-size: 11.8px;
+  color: #bbe4e9;
+  border: solid 4px #00204a;
+  background-color: #00204a;
+  opacity: 0.6;
+  display: flex;
+  justify-content: center;
+}
+h3 {
+  margin: 0px;
 }
