@@ -2,7 +2,7 @@ let restartBtn = document.getElementById("restart-button");
 let song = new Audio("docs/assets/sounds/game over sound.mp3");
 song.loop = false;
 
-let song2 = new Audio("docs/assets/sounds/game music.mp3");
+let song2 = new Audio("docs/assets/sounds/game music2.mp3");
 song2.loop = true;
 song2.play();
 song2.pause();
